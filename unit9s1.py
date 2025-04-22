@@ -170,39 +170,39 @@ def build_tree(values):
 # Return a list of the cupcake values in the order you 
 # iced them.
 
-# class TreeNode():
-#      def __init__(self, flavor, left=None, right=None):
-#         self.val = flavor
-#         self.left = left
-#         self.right = right
+class TreeNode():
+     def __init__(self, flavor, left=None, right=None):
+        self.val = flavor
+        self.left = left
+        self.right = right
 
-# def zigzag_icing_order(cupcakes):
-#     cupcakes_list = []
-#     l_r = False
-#     cupcakes_list = zigzag_icing_order1(cupcakes, 0, l_r, cupcakes_list)
-#     final_cupcakes_list = []
+def zigzag_icing_order(cupcakes):
+    cupcakes_list = []
+    l_r = False
+    cupcakes_list = zigzag_icing_order1(cupcakes, 0, l_r, cupcakes_list)
+    final_cupcakes_list = []
 
-#     for i in cupcakes_list:
-#         for j in i:
-#             final_cupcakes_list.append(j)
+    for i in cupcakes_list:
+        for j in i:
+            final_cupcakes_list.append(j)
 
-#     return final_cupcakes_list
+    return final_cupcakes_list
 
-# def zigzag_icing_order1(cupcakes, index, l_r, cupcakes_list):
-#     if len(cupcakes_list) == index and cupcakes:
-#         cupcakes_list.append(list())
-#     if cupcakes:
-#         cupcakes_list[index].append(cupcakes.val)
-#         index += 1
-#         if l_r:
-#             l_r = False
-#             zigzag_icing_order1(cupcakes.left, index, l_r, cupcakes_list)
-#             zigzag_icing_order1(cupcakes.right, index, l_r, cupcakes_list)
-#         elif l_r == False:
-#             l_r = True
-#             zigzag_icing_order1(cupcakes.right, index, l_r, cupcakes_list)
-#             zigzag_icing_order1(cupcakes.left, index, l_r, cupcakes_list)
-#     return cupcakes_list
+def zigzag_icing_order1(cupcakes, index, l_r, cupcakes_list):
+    if len(cupcakes_list) == index and cupcakes:
+        cupcakes_list.append(list())
+    if cupcakes:
+        cupcakes_list[index].append(cupcakes.val)
+        index += 1
+        if l_r:
+            l_r = False
+            zigzag_icing_order1(cupcakes.left, index, l_r, cupcakes_list)
+            zigzag_icing_order1(cupcakes.right, index, l_r, cupcakes_list)
+        elif l_r == False:
+            l_r = True
+            zigzag_icing_order1(cupcakes.right, index, l_r, cupcakes_list)
+            zigzag_icing_order1(cupcakes.left, index, l_r, cupcakes_list)
+    return cupcakes_list
 
 
 
@@ -215,10 +215,10 @@ def build_tree(values):
 # """
 
 # # Using build_tree() function included at top of page
-# flavors = ["Chocolate", "Vanilla", "Lemon", "Strawberry", None, "Hazelnut", "Red Velvet"]
-# cupcakes = build_tree(flavors)
+flavors = ["Chocolate", "Vanilla", "Lemon", "Strawberry", None, "Hazelnut", "Red Velvet"]
+cupcakes = build_tree(flavors)
 
-# print(zigzag_icing_order(cupcakes))
+print(zigzag_icing_order(cupcakes))
 
 # ['Chocolate', 'Lemon', 'Vanilla', 'Strawberry', 'Hazelnut', 'Red Velvet']
 
@@ -236,11 +236,11 @@ def build_tree(values):
 # provide a rationale for why you believe your solution has the stated time and space complexity.
 # Assume the input tree is balanced when calculating time complexity.
 
-class TreeNode():
-     def __init__(self, order_size, left=None, right=None):
-        self.val = order_size
-        self.left = left
-        self.right = right
+# class TreeNode():
+#      def __init__(self, order_size, left=None, right=None):
+#         self.val = order_size
+#         self.left = left
+#         self.right = right
 
-def larger_order_tree(orders):
-    pass
+# def larger_order_tree(orders):
+#     pass
